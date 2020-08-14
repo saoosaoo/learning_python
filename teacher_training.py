@@ -7,6 +7,7 @@ html = res.text
 soup = BeautifulSoup(html, 'html.parser')
 titles = soup.select('tbody > tr > td > ul > li > a')
 
+
 msg = ""
 for title in titles:
     msg = msg + title.text + "\n"
